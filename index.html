@@ -1,67 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-        
-        body {
-            overflow: hidden;
-            background-color: black;
-
-        }
-
-        #slideSource {
-            opacity: 1;
-            -webkit-transition: opacity 3s;
-            -moz-transition: opacity 3s;
-            transition: opacity 3s;
-            overflow: hidden;
-        }
-
-        #slideSource.fade {
-            opacity: 0;
-        }
-
-        #myVideo {
-            margin-top: 50vh;
-            transform: translate(0, -50%);
-        }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 <body>
-    <div id="slideSource" style="width:100vw; height: 100vh;">
-        <video id="myVideo" width="100%" height="auto" autoplay="true">
-            <source src="Videos/Preloader.mp4" type="video/mp4">
-            <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
-        </video>
-    </div>
 
-    <script>
-
-        $(document).ready(function () {
-            $("#myVideo").play();
-        });
-
-
-        var vid = document.getElementById("myVideo");
-        vid.onended = function () {
-            $("#slideSource").fadeOut(5000);
-
-            // alert("The video has ended");
-            window.location = "new.html"
-        };
-
-    </script>
 </body>
-
 </html>
